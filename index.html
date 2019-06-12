@@ -5,9 +5,6 @@
 <!-- 	<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs>
-	<script>
-		document.getElementById("arrow").innerHTML='<a-entity class="example" gltf-model="#right" scale="0.5 0.5 0.5"></a-entity>';
-	</script>
 		    <a-assets>
 			    <a-asset-item id="right" src="right.glb"></a-asset-item>
 			    <a-asset-item id="left" src="left.glb"></a-asset-item>
@@ -17,6 +14,9 @@
 		    <a-marker preset='hiro' id="arrow">
 			<a-entity class="example" gltf-model="#left" scale="0.5 0.5 0.5"></a-entity>
 		    </a-marker>
+	<script>
+		document.getElementById("arrow").innerHTML='<a-entity class="example" gltf-model="#right" scale="0.5 0.5 0.5"></a-entity>';
+	</script>
 		    <a-entity camera></a-entity>
 		</a-scene>
 	</body>
