@@ -5,11 +5,11 @@
 <!-- 	<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs>
-<!-- 	<script>
-		document.getElementById("Arrow").gltf-model.src="right.gltf";
-	</script> -->
-		    <a-marker preset='hiro'>
-			<a-entity gltf-model="right.gtlf" scale="0.5 0.5 0.5" color="#6646E7"></a-entity>
+	<script>
+		document.getElementById("Change").gltf-model.src="right.gltf";
+	</script>
+		    <a-marker preset='hiro' id="Change">
+			<a-entity gltf-model="forward.glb" scale="0.5 0.5 0.5"></a-entity>
 		    </a-marker>
 		    <a-entity camera></a-entity>
 		</a-scene>
