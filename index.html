@@ -5,6 +5,10 @@
 <!-- 	<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs="debugUIEnabled: false">
+        <script>
+          var upd = document.querySelector('#arrow').components.obj-model;
+          upd = "obj: #left-obj; mtl: #left-mtl";
+        </script>
 		    <a-assets>
 			    <a-asset-item id="right-obj" src="right.obj"></a-asset-item>
 			    <a-asset-item id="right-mtl" src="right.mtl"></a-asset-item>
@@ -14,13 +18,10 @@
 			    <a-asset-item id="forward-mtl" src="forward.mtl"></a-asset-item>
 			    <a-asset-item id="backward-obj" src="backward.obj"></a-asset-item>
 			    <a-asset-item id="backward-mtl" src="backward.mtl"></a-asset-item>
-   		    </a-assets>
+   		  </a-assets>
 		    <a-marker preset='hiro' id="arrow">
-			<a-entity obj-model="obj: #right-obj; mtl: #right-mtl" scale="0.5 0.5 0.5"></a-entity>
+			    <a-entity id="arrow" obj-model="obj: #right-obj; mtl: #right-mtl" scale="0.5 0.5 0.5"></a-entity>
 		    </a-marker>
-<!-- 	<script>
-		document.getElementById("arrow").innerHTML='<a-entity class="example" gltf-model="#right" scale="0.5 0.5 0.5"></a-entity>';
-	</script> -->
 		    <a-entity camera></a-entity>
 		</a-scene>
 	</body>
