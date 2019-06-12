@@ -6,13 +6,17 @@
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs="debugUIEnabled: false">
 		    <a-assets>
-			    <a-asset-item id="right" src="right.glb"></a-asset-item>
-			    <a-asset-item id="left" src="left.glb"></a-asset-item>
-			    <a-asset-item id="forward" src="forward.glb"></a-asset-item>
-	    		    <a-asset-item id="backward" src="backward.glb"></a-asset-item>
+			    <a-asset-item id="right-obj" src="right.obj"></a-asset-item>
+			    <a-asset-item id="right-mtl" src="right.mtl"></a-asset-item>
+			    <a-asset-item id="left-obj" src="left.obj"></a-asset-item>
+			    <a-asset-item id="left-mtl" src="left.mtl"></a-asset-item>
+			    <a-asset-item id="forward-obj" src="forward.obj"></a-asset-item>
+			    <a-asset-item id="forward-mtl" src="forward.mtl"></a-asset-item>
+			    <a-asset-item id="backward-obj" src="backward.obj"></a-asset-item>
+			    <a-asset-item id="backward-mtl" src="backward.mtl"></a-asset-item>
    		    </a-assets>
 		    <a-marker preset='hiro' id="arrow">
-			<a-obj-model src="Arrow.obj" mtl="Arrow.mtl" scale="0.5 0.5 0.5"></a-obj-model>
+			<a-obj-model src="#right-obj" mtl="#right-mtl" scale="0.5 0.5 0.5"></a-obj-model>
 		    </a-marker>
 <!-- 	<script>
 		document.getElementById("arrow").innerHTML='<a-entity class="example" gltf-model="#right" scale="0.5 0.5 0.5"></a-entity>';
