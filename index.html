@@ -6,9 +6,11 @@
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs="debugUIEnabled: false">
         <script>
-          var upd = document.querySelector('#arrow').components.obj-model;
-          upd = "obj: #left-obj; mtl: #left-mtl";
+          var upd = document.querySelector('#arrow').object3D;
+//           upd = "obj: #left-obj; mtl: #left-mtl";
 	  console.log("Hi");
+	  console.log(upd.parent);
+		console.log(upd.children);
         </script>
 		    <a-assets>
 			    <a-asset-item id="right-obj" src="right.obj"></a-asset-item>
