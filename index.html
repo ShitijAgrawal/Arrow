@@ -14,19 +14,19 @@
   				obj: #backward-obj,
   				mtl: #backward-mtl
 				});
-			el.object3D.position.set(1, 2, -3)
+			el.object3D.position.set(1, 2, -3);
 		    }
 			  
 			  
 			  
 		    if(x==2){
-		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #left-obj; mtl: #left-mtl"></a-entity>';
+		      document.getElementById("arrow").innerHTML = '<a-entity id="mario" obj-model="obj: #left-obj; mtl: #left-mtl"></a-entity>';
 		    }
 		    if(x==3){
-		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>';
+		      document.getElementById("arrow").innerHTML = '<a-entity id="mario" obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>';
 		    }
 		    if(x==4){
-		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #forward-obj; mtl: #forward-mtl"></a-entity>';
+		      document.getElementById("arrow").innerHTML = '<a-entity id="mario" obj-model="obj: #forward-obj; mtl: #forward-mtl"></a-entity>';
 		    }
 		  }
 		</script>
