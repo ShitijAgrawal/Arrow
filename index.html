@@ -5,11 +5,29 @@
 <!-- 	<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
 	<body style='margin : 0px; overflow: hidden;' onload="myFunction()">
 		<script>
-			function myFunction() {
-				document.getElementById("arrow").obj-model = "obj: #backward-obj; mtl: #backward-mtl";
-// 				document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"  scale="0.5 0.5 0.5"></a-entity>';
-			}
-       		</script>
+		  function myFunction() {
+		    var url_string = window.location.href; //window.location.href
+		    var url = new URL(url_string);
+		    var bradi = url.searchParams.get("c");
+		    var brad = 1;
+		    if(brad==1){
+		//      alert("c = 1");
+		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"></a-entity>';
+		    }
+		    if(brad==3){
+		//      alert("c = 3");
+		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>';
+		    }
+		    if(brad==2){
+		//      alert("c = 3");
+		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #left-obj; mtl: #left-mtl"></a-entity>';
+		    }
+		    if(brad==4){
+		//      alert("c = 3");
+		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #forward-obj; mtl: #forward-mtl"></a-entity>';
+		    }
+		  }
+		</script>
 		<a-scene embedded arjs="debugUIEnabled: false">
 		    <a-assets>
 			    <a-asset-item id="right-obj" src="right.obj"></a-asset-item>
