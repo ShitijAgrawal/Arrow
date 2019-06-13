@@ -11,8 +11,15 @@
 		    var bradi = url.searchParams.get("c");
 		    var brad = 1;
 		    if(brad==1){
-		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"></a-entity>';
+		      //document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"></a-entity>';
+		    	entityEl.setAttribute('obj-model', {
+  				obj: #backward-obj,
+  				mtl: #backward-mtl
+				});
 		    }
+			  
+			  
+			  
 		    if(brad==2){
 		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #left-obj; mtl: #left-mtl"></a-entity>';
 		    }
