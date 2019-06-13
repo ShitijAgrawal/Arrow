@@ -6,7 +6,8 @@
 	<body style='margin : 0px; overflow: hidden;' onload="myFunction()">
 		<script>
 			function myFunction() {
-				document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"  scale="0.5 0.5 0.5"></a-entity>';
+				document.getElementById("arrow").obj-model = "obj: #backward-obj; mtl: #backward-mtl";
+// 				document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"  scale="0.5 0.5 0.5"></a-entity>';
 			}
        		</script>
 		<a-scene embedded arjs="debugUIEnabled: false">
@@ -20,7 +21,7 @@
 			    <a-asset-item id="backward-obj" src="backward.obj"></a-asset-item>
 			    <a-asset-item id="backward-mtl" src="backward.mtl"></a-asset-item>
    		  </a-assets>
-		    <a-marker preset='hiro' id="arrow">
+		    <a-marker preset='hiro'>
 			    <a-entity id="arrow" obj-model="obj: #right-obj; mtl: #right-mtl" scale="0.5 0.5 0.5"></a-entity>
 		    </a-marker>
 		    <a-entity camera></a-entity>
