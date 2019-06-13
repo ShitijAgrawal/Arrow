@@ -6,28 +6,26 @@
 	<body style='margin : 0px; overflow: hidden;' onload="myFunction()">
 		<script>
 		  function myFunction() {
-		    var url_string = window.location.href; //window.location.href
-		    var url = new URL(url_string);
-		    var bradi = url.searchParams.get("c");
-		    var brad = 1;
+		    var x = 1;
 		    var el = document.querySelector('[mario]');
-		    if(brad==1){
+		    if(x==1){
 		      //document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"></a-entity>';
 		    	el.setAttribute('obj-model', {
   				obj: #backward-obj,
   				mtl: #backward-mtl
 				});
+			el.object3D.position.set(1, 2, -3)
 		    }
 			  
 			  
 			  
-		    if(brad==2){
+		    if(x==2){
 		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #left-obj; mtl: #left-mtl"></a-entity>';
 		    }
-		    if(brad==3){
+		    if(x==3){
 		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>';
 		    }
-		    if(brad==4){
+		    if(x==4){
 		      document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #forward-obj; mtl: #forward-mtl"></a-entity>';
 		    }
 		  }
