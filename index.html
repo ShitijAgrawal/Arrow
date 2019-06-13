@@ -10,9 +10,10 @@
 		    var url = new URL(url_string);
 		    var bradi = url.searchParams.get("c");
 		    var brad = 1;
+		    var el = document.querySelector('#mario');
 		    if(brad==1){
 		      //document.getElementById("arrow").innerHTML = '<a-entity obj-model="obj: #backward-obj; mtl: #backward-mtl"></a-entity>';
-		    	entityEl.setAttribute('obj-model', {
+		    	el.setAttribute('obj-model', {
   				obj: #backward-obj,
   				mtl: #backward-mtl
 				});
@@ -43,7 +44,7 @@
 			    <a-asset-item id="backward-mtl" src="backward.mtl"></a-asset-item>
    		  </a-assets>
 		    <a-marker preset='hiro' id="arrow">
-			    <a-entity obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>
+			    <a-entity id="mario" obj-model="obj: #right-obj; mtl: #right-mtl"></a-entity>
 		    </a-marker>
 		    <a-entity camera></a-entity>
 		</a-scene>
